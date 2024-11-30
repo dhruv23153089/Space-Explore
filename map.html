@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SATELLITE MAP</title>
+    <link rel="icon" type="image/x-icon" href="attachment/favicon.jpg">
+    <link rel="stylesheet" href="map.css">
+    <style>
+        #heading{
+            font-size: large;
+            color: white;
+            text-align: center;
+        }
+     </style>
+    
+</head>
+<body>
+    <div class="header">
+    <div class="menu-container">
+        <p class="menu-heading">Explore Space</p>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <div class="dropdown" id="dropdownMenu">
+            <a href="dhruv.html">Home</a>
+            <a href="resources.html">Resources</a>
+            <a href="#">Contact</a>
+        </div>
+        </div>
+        <script src="resource menu bar .js"></script>
+    </div>
+
+     <h1>Satellite Maps</h1>
+
+    <div class="container">
+        <div id="heading">
+            <h2>Where are Indian Space Centers?</h2>
+        </div>
+        <br>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1XCDJbMAy2F6VLimvwN2hGGEqHZXLDj4&ehbc=2E312F&noprof=1" allowfullscreen title="Map of Indian Space Centers"></iframe>
+            <p>The above map shows space centers across India and neighboring countries, along with a brief description of each space center shown on the map.</p>
+        </div>
+    </div>
+
+    <div class="coverage">
+        <div id="heading">
+            <h2>Interactive Map for Satellite Coverage</h2>
+        </div>
+        <p> This allows real-time satellite tracking and provides coverage information based on orbital parameters.</p>
+       <div class="map-coverage">
+       <script>
+            var norad_n2yo = '25544|ISS,43600|Aeolus,20580|HST';
+            var size_n2yo = 'large';
+            var allpasses_n2yo = '1';
+            var map_n2yo = '4';
+        </script>
+        <script type="text/javascript" src="https://www.n2yo.com/js/widget-tracker.js"></script>
+       </div>
+       <p>This show satellite trajectories, real-time position, and coverage areas based on the satellite’s orbit.</p>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <p>&copy; 2024 Explore Space. All rights reserved.</p>
+            <p>Explore Space video and content contains copyrighted material and should not be downloaded or used outside of this website.</p>
+            
+        </div>
+    </footer>
+</body>
+</html>

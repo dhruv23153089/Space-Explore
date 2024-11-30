@@ -1,0 +1,191 @@
+body{
+    background-color: black;
+    color: #fff;
+
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    
+  }
+
+.header{
+    background-image: url('attachment/hs-1821a-2400x1200.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the whole area */
+    background-position: center; /* Center the image */
+    height: 100px; /* Set a height for the header */
+    position: relative; /* Position for absolute positioning of child elements */
+    
+    justify-content:space-evenly;    
+    /* align-items: center;  */
+}
+
+#heading{
+    font-size: large;
+    text-align: center;
+    margin-top: 20px;
+}
+.menu-container {
+    position: relative;
+    display: flex;
+    justify-content:space-between ;
+    padding: 10px;
+    
+    
+}
+
+.menu-heading{
+    margin: 0;
+    color: white;
+    font-family: cursive;
+    font-size: xx-large;
+}
+
+.hamburger {
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    border-radius: 2px;
+    
+   
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    background-color: grey;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown a:hover {
+    background-color: black;
+}
+
+
+h1 {
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+}
+.container {
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    background-color: #1c1c1c;
+    width: 100%; 
+    max-width:  1450px;
+    margin: auto; 
+   
+}
+
+.container h2 {
+    color: #0f0;
+}
+
+.map-container {
+    position: relative;
+    width: 100%; /* Full width */
+    max-width: 800px;
+    max-height: 400px;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    margin: 0 auto;
+    overflow: hidden; /* Hide any overflow */
+}
+.map-container p {
+    text-align: center;
+    font-size: 20px;
+}
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 80%; /* Full height */
+    border: 0; /* Remove border */
+}
+
+
+
+.coverage {
+    background-color: #1c1c1c;
+    width: 100%; /* Adjust width as needed */
+    max-width:  1450px;
+    margin:20px auto; /* Center the container */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    
+}
+
+.coverage h2 {
+    text-align: center;
+    color: #0f0;
+}
+
+.coverage p{
+    text-align: center;
+    font-size: 20px;
+}
+
+.map-coverage {
+    position: relative;
+    width: 100%; /* Full width */
+    max-width: 800px;
+    max-height: 100%;
+    /* padding-top: 56.25%; 16:9 Aspect Ratio */
+    margin: 0 auto;
+    overflow: hidden; /* Hide any overflow */
+}
+
+.map-coverage script {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    border: 0;
+}
+
+.footer {
+    border-top: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    display: flex; 
+    flex-direction: column;
+    background-color: #222 ;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        font-size: small; /* Adjust text size for mobile */
+    }
+}
+
+.footer-content {
+    max-width:1200px;
+    margin: 0 auto;
+}
+.footer-links {
+    margin-top: 10px;
+}
+.footer-links a {
+    font-weight:bold;
+    color: rgb(2, 142, 2);
+    margin: 0 10px;
+    text-decoration: none;
+}
+.footer-links a:hover {
+    color: lightgreen;
+    text-decoration: underline;
+}

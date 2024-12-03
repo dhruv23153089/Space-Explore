@@ -1,13 +1,14 @@
 body{
     background-color: black;
     color: #fff;
-
+    margin: 0;
 }
-body, html {
-    height: 100%;
+/* body, html {
+    max-height: 100%;
+    max-width: 100%;
     margin: 0;
     
-  }
+  } */
 
 .header{
     background-image: url('attachment/banner\ background.webp');
@@ -19,7 +20,7 @@ body, html {
 }
 
 #heading{
-    font-size: large;
+    font-size: 4vh;
     text-align: center;
     margin-top: 20px;
 }
@@ -35,8 +36,6 @@ body, html {
 .menu-heading{
     margin: 0;
     color: white;
-    font-family: cursive;
-    font-size: xx-large;
 }
 
 .hamburger {
@@ -75,15 +74,17 @@ h1 {
     text-align: center;
 
 }
+
+.body .container {
+    width: 100%;
+}
 .container {
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
+    margin:20px auto; /* Center the container */
+    max-width: 1200px;
     background-color: #1c1c1c;
-    width: 100%; 
-    max-width:  1450px;
-    margin: auto; 
-   
+    border-radius: 8px;
+    margin-top: 20;
+    padding: 20px;
 }
 
 .container h2 {
@@ -114,15 +115,16 @@ h1 {
 
 
 
-.coverage {
-    background-color: #1c1c1c;
+.body .coverage {
     width: 100%; /* Adjust width as needed */
-    max-width:  1450px;
+}
+.coverage {
     margin:20px auto; /* Center the container */
-    padding: 20px;
+    max-width:  1200px;
+    background-color: #1c1c1c;
     border-radius: 8px;
-    margin-top: 20px;
-    
+    margin-top: 20;
+    padding: 20px;
 }
 
 .coverage h2 {
@@ -137,12 +139,12 @@ h1 {
 
 .map-coverage {
     position: relative;
-    width: 100%; /* Full width */
+    /* width: 100%; Full width */
     max-width: 800px;
-    max-height: 100%;
-    /* padding-top: 56.25%; 16:9 Aspect Ratio */
+    max-height: 90%;
+    /* padding-top: 56.25%; */
     margin: 0 auto;
-    overflow: hidden; /* Hide any overflow */
+    overflow: hidden; /* H ide any overflow */
 }
 
 .map-coverage script {
@@ -164,11 +166,6 @@ h1 {
     background-color: #222 ;
 }
 
-@media (max-width: 768px) {
-    .footer {
-        font-size: small; /* Adjust text size for mobile */
-    }
-}
 
 .footer-content {
     max-width:1200px;
@@ -186,4 +183,71 @@ h1 {
 .footer-links a:hover {
     color: lightgreen;
     text-decoration: underline;
+}
+
+/* For devices with a width of 1024px and below (Small laptops and tablets) */
+@media (max-width: 1024px) {
+    .header {
+        height: 80px;
+    }
+
+    .menu-heading {
+        font-size: 3vw;
+    }
+
+    .hamburger {
+        font-size: 22px;
+    }
+
+    .container {
+        font-size: 16px;
+    }
+    .map-container p {
+        font-size: 16px;
+    }
+    .coverage {
+        font-size: 16px;
+    }
+    .coverage p {
+        font-size: 16px;
+    }
+
+    .map-container iframe {
+        height: 70%;
+    }
+
+    .footer {
+        font-size: medium;
+    }
+}
+
+/* For large screens (Desktops, large monitors) */
+@media (min-width: 1200px) {
+    .header {
+        height: 90px;
+    }
+
+    .menu-heading {
+        font-size: 4vw;
+    }
+
+    .hamburger {
+        font-size: 24px;
+    }
+
+    .container {
+        font-size: 18px;
+    }
+
+    .coverage {
+        font-size: 18px;
+    }
+
+    .map-container iframe {
+        height: 80%;
+    }
+
+    .footer {
+        font-size: large;
+    }
 }

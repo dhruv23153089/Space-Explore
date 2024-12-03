@@ -2,11 +2,6 @@
    overflow-x: hidden;
 }
 
-/* body, html {
-    height: 100%;
-    margin: 0;
-    
-} */
 body{
     
     margin :0;
@@ -14,10 +9,11 @@ body{
 
 #myvideo{
     position:absolute;
-    right: 0%;
-    bottom: 0%;
-
-   
+    top:0;
+    left: 0;
+    max-width: 100%;   
+    height:100vh;
+    z-index: -1;
 }
 
 @media (min-aspect-ratio: 16/9){
@@ -69,38 +65,41 @@ body{
       
       #contact {
         top: 200px;
-        background-color: grey 
+        background-color: grey;
       }
 
-
-
 .container{
-   
     display: flex;
     flex-direction: column; 
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height:100vh;
     position: relative;
-   
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-nav{
-    width: 90%;
+.top{
+    max-width: 100%;
     position: absolute;
     top: 0%;
     left: 0%;
-    font-size:larger;
+    /* right:0%;
+    bottom: 0%; */
     
 }
- nav p{
+.top p{
     padding-left: 12px;
+    font-size: 4vh;
  }
 
-
+.p{
+    font-size: 20px;
+}
 
 .two{
+    z-index: 1;
     padding-top: 120px ;
     text-align:center;
 }
@@ -109,7 +108,6 @@ nav{
     font-size: 6vw;
     color: #fff;
     font-weight:300;
-    font-family: cursive;
     transition: 0.5s ;
 }
 .two h1:hover{
@@ -148,7 +146,6 @@ nav{
 
 a:link{
 text-decoration: none;
-
 }            
 
 a:visited {
@@ -165,12 +162,10 @@ text-decoration: none;
 .about{
     width: 100%;
     color: #fff;
-    /* padding-left: 450px; */
     padding: 20px;
     margin: auto;
     text-align: center;
     max-width:min-content;
-    
 }
 
 .three{
@@ -179,13 +174,17 @@ text-decoration: none;
 }
 
 .three p{
-    font-size: medium;
+    font-size: 20px;
 }
+
 .interactives{
-   
     display: flex;
     flex-wrap: wrap;
     justify-content: center
+}
+
+.interactives p{
+    font-size: 20px;
 }
 
 .box{
@@ -213,18 +212,6 @@ text-decoration: none;
     padding-right: 20px;
 }
 
-/* .footer {
-    border-top:  2px solid white;
-    padding: 20px;
-    background-color: grey;
-    text-align: center;
-    color: #fff;
-}
-.footer1{
-    width: 1fr;
-    height: 40%;
-    
-} */
 
 .footer {
     border-top: 2px solid rgb(255, 255, 255);
@@ -234,12 +221,6 @@ text-decoration: none;
     display: flex; 
     flex-direction: column;
     background-color: #222 ;
-}
-
-@media (max-width: 768px) {
-    .footer {
-        font-size: small; /* Adjust text size for mobile */
-    }
 }
 
 .footer-content {
@@ -258,4 +239,34 @@ text-decoration: none;
 .footer-links a:hover {
     color: lightgreen;
     text-decoration: underline;
+} 
+
+@media (max-width: 1024px) {
+    .footer {
+        font-size: medium;
+    }
+    .p{
+        font-size: 16px;
+    }
+    .top p {
+    font-size: 3vw;
+    }
+    .interactives p{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1200px){
+    .footer {
+       font-size: large;
+    }
+    .p {
+        font-size: 20px;
+    }
+    .top p {
+        font-size: 4vw;
+    }
+    .interactives p{
+        font-size: 20px;
+    }
 }

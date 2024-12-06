@@ -3,12 +3,6 @@ body{
     color: #fff;
     margin: 0;
 }
-/* body, html {
-    max-height: 100%;
-    max-width: 100%;
-    margin: 0;
-    
-  } */
 
 .header{
     background-image: url('attachment/banner\ background.webp');
@@ -38,13 +32,12 @@ body{
     color: white;
 }
 
+
 .hamburger {
     cursor: pointer;
-    font-size: 24px;
+    font-size: 1.8vw;
     color: #fff;
     border-radius: 2px;
-    
-   
 }
 
 .dropdown {
@@ -58,6 +51,7 @@ body{
 }
 
 .dropdown a {
+    font-size: 1.2vw;
     display: block;
     padding: 10px;
     text-decoration: none;
@@ -70,9 +64,9 @@ body{
 
 
 h1 {
+    font-size: 2.1vw;
     font-family: Arial, sans-serif;
     text-align: center;
-
 }
 
 .body .container {
@@ -88,7 +82,13 @@ h1 {
 }
 
 .container h2 {
+    font-size: 2.08vw;
     color: #0f0;
+}
+
+.container p {
+    text-align: center;
+    font-size: 1.2vw;
 }
 
 .map-container {
@@ -100,10 +100,7 @@ h1 {
     margin: 0 auto;
     overflow: hidden; /* Hide any overflow */
 }
-.map-container p {
-    text-align: center;
-    font-size: 20px;
-}
+
 .map-container iframe {
     position: absolute;
     top: 0;
@@ -128,13 +125,14 @@ h1 {
 }
 
 .coverage h2 {
+    font-size: 2.08vw;
     text-align: center;
     color: #0f0;
 }
 
 .coverage p{
     text-align: center;
-    font-size: 20px;
+    font-size: 1.2vw;
 }
 
 .map-coverage {
@@ -188,14 +186,14 @@ h1 {
 /* For devices with a width of 1024px and below (Small laptops and tablets) */
 @media (max-width: 1024px) {
     .header {
-        height: 80px;
+        height: 6vw;
     }
 
-    .menu-heading {
-        font-size: 3vw;
-    }
+    /* .menu-heading p{
+        font-size: 2.08vw;
+    } */
 
-    .hamburger {
+    /*.hamburger {
         font-size: 22px;
     }
 
@@ -210,28 +208,28 @@ h1 {
     }
     .coverage p {
         font-size: 16px;
-    }
+    } */
 
     .map-container iframe {
         height: 70%;
     }
 
     .footer {
-        font-size: medium;
+        font-size:1.2vw;
     }
 }
 
 /* For large screens (Desktops, large monitors) */
 @media (min-width: 1200px) {
     .header {
-        height: 90px;
+        height: 6vw;
     }
 
-    .menu-heading {
-        font-size: 4vw;
-    }
+    /* .menu-heading p{
+        font-size:2.08vw;
+    } */
 
-    .hamburger {
+    /*.hamburger {
         font-size: 24px;
     }
 
@@ -241,13 +239,13 @@ h1 {
 
     .coverage {
         font-size: 18px;
-    }
+    } */
 
     .map-container iframe {
         height: 80%;
     }
 
     .footer {
-        font-size: large;
+        font-size:1.2vw;
     }
 }

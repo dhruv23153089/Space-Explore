@@ -213,8 +213,7 @@ text-decoration: none;
     /* height: auto; */
     display: block; /* Ensure no gaps */
     border-radius: 5px;
-    border-color: green;
-    border-width: 2px;
+    border: 2px solid green;
 }
 .box figcaption {
     font-size: 1.2vw;

@@ -1,15 +1,11 @@
 body, html {
-    
+    background-color: black;
     margin: 0;
     
   }
   
   .header {
-     background-color: #1b1b1b;
-  }
-  
-  .background {
-    background-image: url('attachment/banner\ background.webp'); 
+    background-image: url('attachment/R.jpg'); 
     background-size: cover;
     height: 85px; 
     position: relative;
@@ -28,13 +24,11 @@ body, html {
   .menu-heading{
       margin: 0;
       color: white;
-      font-family: cursive;
-      font-size: xx-large;
   }
   
   .hamburger {
       cursor: pointer;
-      font-size: 24px;
+      font-size:1.8vw ;
       color: #fff;
       border-radius: 2px;
      
@@ -51,6 +45,7 @@ body, html {
   }
   
   .dropdown a {
+      font-size: 1.2vw;
       display: block;
       padding: 10px;
       text-decoration: none;
@@ -66,10 +61,10 @@ body, html {
   @import url('https://fonts.cdnfonts.com/css/poppins');
   
   .banner{
-      background-image: url(attachment/banner\ background.webp);
+      background-image: url(attachment/galaxy.jpg);
       background-position: center;
-      background-size: cover;
-      background-color: rgba(0, 0, 0, 1);
+      background-size:cover;
+      background-color:rgb(103, 102, 102);
       width: 100%;
       height: 90vh; 
       text-align: center;
@@ -100,7 +95,7 @@ body, html {
       inset: 0 0 0 0;
       transform: 
           rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-          translateZ(550px);
+          translateZ(500px);
   }
   .banner .slider .item img{
       width: 80%; /*fjgmhjj*/
@@ -124,7 +119,7 @@ body, html {
   }
   .banner .content h1{
       font-family: 'ICA Rubrik';
-      font-size: 9em;
+      font-size: 10.8vw;/*9em*/
       line-height: 1em;
       color: #25283B;
       position: relative;
@@ -153,36 +148,46 @@ body, html {
     }
 
   .banner .content h2{
-      font-size: 2em;
+      font-size:2.4vw;
   }
   .banner .content .model{
       background-image: url(attachment/model.png);
       width: 100%;
-      height: 70vh;
+      height: 70vh;/*70vh*/
       position: absolute;
       bottom: 0;
       left: 0;
       background-size: auto 130%;
+      /* background-size: auto; */
       background-repeat: no-repeat;
       background-position: top center;
       z-index: 1;
   }
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1024px) {
+
+    .banner {
+        height: 60vh;
+    }
       .banner .slider{
-          width: 160px;
-          height: 200px;
-          left: calc(50% - 80px);
+          width: 100px;
+          height: 140px;
+          top: 10%;
+          left: calc(50% - 50px);
       }
       .banner .slider .item{
           transform: 
               rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-              translateZ(300px);
+              translateZ(200px);
+      }
+      .banner .content .model{
+        width: 80%;
+        height: 40vh;
       }
       .banner .content h1{
           text-align: center;
           width: 100%;
           text-shadow: 0 10px 20px #000;
-          font-size: 7em;
+          font-size: 12vw;
       }
       .banner .content .news,
       .banner .content .blogs{
@@ -191,9 +196,10 @@ body, html {
           text-shadow: 0 10px 20px #000;
           z-index: 3;
           max-width: unset;
-          width: 100%;
-          text-align: center;
-          padding:0 140px;
+          width: 50%;
+          justify-content: space-evenly;
+          padding:0 120px;
+          font-size: 1.2vw;
        }
   }
 
@@ -201,14 +207,14 @@ body, html {
 /* Base styles for the News dropdown */
 .news-dropdown {
     cursor: pointer;
-    font-size: 3em;
+    font-size: 48vw;
     margin: 0;
     color: #d2d2d2;
     transition: color 0.3s ease;
 }
 
 .news-dropdown:hover {
-    color: green;
+    color: rgb(0, 0, 0);
 }
 
 
@@ -221,7 +227,7 @@ body, html {
     border: 1px solid green;
     display: none; 
     min-width: 150px;
-    z-index: 3;
+    z-index: 999;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
@@ -250,10 +256,26 @@ body, html {
     display: block;
 }
 
+@media screen and (max-width:1024px){
+    .news,
+    .blogs{
+        display: inline-block;
+    }
+    .dropdown-menu{
+        overflow: visible;
+    }
+    .dropdown-menu li{
+        padding: 2px;
+    }
+    
+}
+
 
 .container {
     border: 3px solid transparent;
     border-top-color: green;
+    z-index: -1;
+    overflow: visible;
   }
   
   .button {
@@ -262,7 +284,7 @@ body, html {
       padding: 10px 40px;
       margin: 3px;
       border: none;
-      font-size: large;
+      font-size: 1.4vw;
       background-color: whitesmoke; 
       color: black;
       cursor: pointer;
@@ -275,6 +297,7 @@ body, html {
       color: black; /* Darker color on hover */
   }
   .button-container {
+     font-size: 1.4vw;
       display: flex;
       justify-content:space-evenly; /* Center buttons horizontally */
       margin-top: 7px;
@@ -291,10 +314,13 @@ body, html {
   
   .slideshow-container {
       position: relative;
-      max-width: 600px;
+      max-width: 50vw;
       margin: auto;
     }
-  
+    
+    .slide_fade img{
+        border-radius: 5px;
+    }
     .slide {
       display: none;
     }
@@ -309,7 +335,7 @@ body, html {
   
     .text {
       color: white;
-      font-size: 20px;
+      font-size: 1.5vw;
       padding: 8px 12px;
       position: absolute;
       bottom: 30px; /* Adjust as desired */
@@ -332,7 +358,7 @@ body, html {
       margin-top: -22px;
       color: white;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 1.35vw;
       transition: 0.3s;
       border-radius: 0 3px 3px 0;
       user-select: none;
@@ -353,8 +379,8 @@ body, html {
   
     .dot {
       cursor: pointer;
-      height: 15px;
-      width: 15px;
+      height: 1.125vw;
+      width: 1.125vw;
       margin: 0 4px;
       background-color: #bbb;
       border-radius: 50%;
@@ -381,6 +407,7 @@ body, html {
       display: flex; 
       flex-direction: column;
       background-color: #222 ;
+      font-size: 1.2vw;
   }
   
   @media (max-width: 768px) {
@@ -406,3 +433,13 @@ body, html {
       color: lightgreen;
       text-decoration: underline;
   }
+
+  @media (max-width: 1024px) {
+    .header {
+        height: 6vw;
+    }
+}
+    @media (min-width: 1200px) {
+        .header {
+            height: 6vw;
+        }}

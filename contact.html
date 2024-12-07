@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Explore Space</h1>
+    </div>
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="tel" id="number" placeholder="Your Mobile No." required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p class="success-message" style="display: none;">Thank you for contacting us!</p>
+        <p class="error-message" style="display: none;">Something went wrong. Please try again.</p>
+    </div>
+    <div class="footer1">
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <!-- <a href="#">Contact Us</a> -->
+            </div>
+            <p>&copy; 2024 Explore Space. All rights reserved.</p>
+            <p>Explore Space video content contains copyrighted material and should not be downloaded or used outside of this website.</p>
+            
+        </footer>
+    </div>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const number = document.getElementById("number").value;
+            const message = document.getElementById("message").value;
+
+            const response = await fetch("http://localhost.contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, email, number, message }),
+            });
+
+            if (response.ok) {
+                document.querySelector(".success-message").style.display = "block";
+                document.querySelector(".error-message").style.display = "none";
+                document.getElementById("contactForm").reset();
+            } else {
+                document.querySelector(".error-message").style.display = "block";
+                document.querySelector(".success-message").style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

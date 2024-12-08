@@ -1,0 +1,115 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:black;
+}
+
+.header {
+    text-align: center;
+    padding: 1.5vw; /* 20px */
+    background-color: #1b1b1b;
+    border-bottom: 0.15vw solid rgb(255, 255, 255); /* 2px */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 3.75vw; /* 50px */
+    color: white;
+}
+.header p {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #aaa;
+}
+
+/* Gallery container */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual video item */
+.video-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Video player styling */
+.video-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Description styling */
+.description {
+    padding: 15px;
+    text-align: center;
+}
+
+.description h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.description p {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.footer {
+    border-top: 0.15vw solid rgb(255, 255, 255); /* 2px */
+    padding: 0.75vw; /* 10px */
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+      height: auto;
+    }
+    .footer {
+        font-size: small; /* Adjust text size for mobile */
+    }
+}
+
+.footer-content {
+    max-width: 90vw; /* 1200px */
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin-top: 0.75vw; /* 10px */
+}
+
+.footer-links a {
+    font-weight: bold;
+    color: rgb(2, 142, 2);
+    margin: 0 0.75vw; /* 10px */
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: lightgreen;
+    text-decoration: underline;
+}

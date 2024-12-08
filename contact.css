@@ -53,7 +53,7 @@ input, textarea, button {
 /* Textarea */
 textarea {
     resize: vertical;
-    height: 14vw; /* 200px */
+    height: 12vw; /* 200px */
 }
 
 /* Button */

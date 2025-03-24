@@ -95,7 +95,7 @@ body, html {
       inset: 0 0 0 0;
       transform: 
           rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-          translateZ(500px);
+          translateZ(400px);
   }
   .banner .slider .item img{
       width: 80%; /*fjgmhjj*/
@@ -157,12 +157,13 @@ body, html {
       position: absolute;
       bottom: 0;
       left: 0;
-      background-size: auto 130%;
+      background-size: auto 120%;
       /* background-size: auto; */
       background-repeat: no-repeat;
       background-position: top center;
       z-index: 1;
   }
+
   @media screen and (max-width: 1024px) {
 
     .banner {
